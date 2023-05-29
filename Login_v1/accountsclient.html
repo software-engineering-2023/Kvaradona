@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/Login_v1/css/accountsclient.css">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://kit.fontawesome.com/fb92a5bde4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container-home">
+        <div class="wrap-content">
+            <header id="header">
+                <div class="header-content">
+                    <h11 id="page-title">Accounts</h11>
+                    <div class="logo-container">
+                        <img src="/Login_v1/images/img-01 copy.png" alt="Logo">
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="/Login_v1/homeclient.html"><i class="fas fa-qrcode"></i><span id="home"
+                                class="nav-item">Home</span></a></li>
+                    <li><a href="#"><i class="fas fa-vault"></i><span id="accounts" class="nav-item">Accounts</span></a>
+                    </li>
+                    <li><a href="/Login_v1/creditcardclient.html"><i class="fas fa-credit-card"></i><span id="card"
+                                class="nav-item">Credit
+                                Card</span></a></li>
+                    <li><a href="/Login_v1/Loans.html"><i class="fas fa-hand-holding-dollar"></i><span id="loans"
+                                class="nav-item">Loans</span></a></li>
+                   
+                    <li><a href="/Login_v1/payment.html"><i class="fas fa-money-bill"></i><span id="payment"
+                                class="nav-item">Payments</span></a></li>
+                                <li><a href="/Login_v1/report.html"><i class="fas fa-bug"></i><span id="report"
+                                    class="nav-item">Report an
+                                    issue</span></a></li>
+                    <li><a href="/Login_v1/index.html"><i class="fas fa-door-open"></i><span class="nav-item">Sign
+                                out</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="summary">
+                    <h1 style="font-family: Century Gothic; font-size: 30;">Accounts Summary</h1>
+                    <table class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Account number</th>
+                                <th>Currency</th>
+                                <th>Amount</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123456789</td>
+                                <td>USD</td>
+                                <td>1,000</td>
+                                <td>Savings</td>
+                            </tr>
+                            <tr>
+                                <td>987654321</td>
+                                <td>GBP</td>
+                                <td>500</td>
+                                <td>Checking</td>
+                            </tr>
+                            <tr>
+                                <td>524938017</td>
+                                <td>EGP</td>
+                                <td>100,000</td>
+                                <td>Savings</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="transactions">
+                    <h1 style="font-family: Century Gothic; font-size: 30;">Transactions</h1>
+
+                    <table class="transaction-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Account #</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transaction-rows">
+                            <tr>
+                                <td>May 28, 2023</td>
+                                <td> Transfer Recieved</td>
+                                <td> 2,000 EGP</td>
+                                <td> 524938017</td>
+                            </tr>
+                            <tr>
+                                <td>April 1, 2023</td>
+                                <td> Amazon</td>
+                                <td> -500 EGP</td>
+                                <td> 524938017</td>
+                            </tr>
+                            <tr>
+                                <td>June 5, 2023</td>
+                                <td> Loan Payment</td>
+                                <td> -10,000 EGP</td>
+                                <td> 524938017</td>
+                            </tr>
+                            <tr>
+                                <td>Feb 25, 2023</td>
+                                <td> Transfer Sent</td>
+                                <td> -500 USD</td>
+                                <td> 123456789</td>
+                            </tr>
+                            <tr>
+                                <td>May 1, 2023</td>
+                                <td> Deposit</td>
+                                <td> 200 GBP</td>
+                                <td> 987654321</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="transfer-form">
+                    <h2>Transfer Funds</h2>
+                    <form>
+                        <label for="from-account">Transfer from account:</label>
+                        <select id="from-account" name="from-account">
+                            <option value="123456789">123456789 (USD)</option>
+                            <option value="987654321">987654321 (GBP)</option>
+                            <option value="524938017">524938017 (EGP)</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <br>
+                        <label for="to-account">Transfer to account:</label>
+                        <input type="text" id="to-account" name="to-account">
+                        <br>
+                        <label for="international">International Transfer:</label>
+                        <input type="checkbox" id="international" name="international">
+                        <br>
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" name="amount" min="0">
+                        <br>
+                        <label for="currency">Currency:</label>
+                        <select id="currency" name="currency">
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="EGP">EGP</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <br>
+                        <input type="submit" value="Transfer">
+                        <script>
+                            const transferForm = document.querySelector('.transfer-form');
+                            const transferButton = transferForm.querySelector('input[type="submit"]');
+
+                            transferButton.addEventListener('click', (event) => {
+                                event.preventDefault();
+                                alert('Transfer is successful!');
+                            });
+                        </script>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <script src="/Login_v1/accountsclient.js"></script>
+</body>
+
+</html>
