@@ -1,0 +1,111 @@
+<html>
+<link rel=" stylesheet" type="text/css" href="/Login_v1/css/payments.css">
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://kit.fontawesome.com/fb92a5bde4.js" crossorigin="anonymous"></script>
+
+<body>
+  <div class="container-home">
+    <div class="wrap-content">
+      <header id="header">
+        <div class="header-content">
+          <h11 id="page-title">Payments</h11>
+          <div class="logo-container">
+            <img src="/Login_v1/images/img-01.png" alt="Logo">
+          </div>
+        </div>
+      </header>
+      <nav>
+        <ul>
+            <li><a href="/Login_v1/homeclient.html"><i class="fas fa-qrcode"></i><span id="home" class="nav-item">Home</span></a></li>
+            <li><a href="/Login_v1/accountsclient.html"><i class="fas fa-vault"></i><span id="accounts"
+                        class="nav-item">Accounts</span></a>
+            </li>
+            <li><a href="/Login_v1/creditcardclient.html"><i class="fas fa-credit-card"></i><span id="card"
+                        class="nav-item">Credit
+                        Card</span></a></li>
+            <li><a href="/Login_v1/Loans.html"><i class="fas fa-hand-holding-dollar"></i><span id="loans"
+                        class="nav-item">Loans</span></a></li>
+            
+            <li><a href="#"><i class="fas fa-money-bill"></i><span id="payment"
+                        class="nav-item">Payments</span></a></li>
+                        <li><a href="/Login_v1/report.html"><i class="fas fa-bug"></i><span id="report"
+                            class="nav-item">Report an
+                            issue</span></a></li>
+            <li><a href="/Login_v1/index.html"><i class="fas fa-door-open"></i><span class="nav-item">Sign
+                        out</span></a>
+            </li>
+        </ul>
+      </nav>
+      <div class="content">
+        <div class="Payments">
+            
+            <h2>Pay Bills</h2>
+            <form>
+                <label for="bill-type">Bill Type:</label>
+                <select id="bill-type" name="bill-type">
+                  <option value="electricity">Electricity</option>
+                  <option value="water">Water</option>
+                  <option value="gas">Gas</option>
+                  <option value="internet">Internet</option>
+                  <option value="phone">Phone</option>
+              <label for="bill_amount">Bill Amount:</label>
+              <input type="number" id="bill_amount" name="bill_amount" min="0"><br><br>
+          
+              <label for="bill_date">Due Date:</label>
+              <input type="date" id="bill_date" name="bill_date"><br><br>
+          
+              <button type="submit" onclick="showMessage()">Pay Bill</button>
+              <script>
+                function showMessage() {
+                  alert("Bill Paid!");
+                }
+                </script>
+            </form>
+          
+            <h2>Pay Debts</h2>
+            <form>
+                <label for="debt-type">Debt Type:</label>
+                <select id="debt-type" name="debt-type">
+                  <option value="credit-card">Credit Card Debt</option>
+                  <option value="student-loan">Student Loan</option>
+                  <option value="personal-loan">Personal Loan</option>
+                  <option value="mortgage">Mortgage</option>
+                  <option value="car-loan">Car Loan</option>
+                 
+                </select>
+          
+              <label for="debt_amount">Debt Amount:</label>
+              <input type="number" id="debt_amount" name="debt_amount"min="0"><br><br>
+          
+              <labelfor="debt_date">Due Date:</label>
+              <input type="date" id="debt_date" name="debt_date"><br><br>
+          
+              <button type="submit"onclick="showMessage()">Pay Debt</button>
+              <script>
+                function showMessage() {
+                  alert("Debit Paid!");
+                }
+                </script>
+            </form>
+        </div>
+      </div>
+
+    </div>
+</div>
+</div>
+</body>
+
+</html>
