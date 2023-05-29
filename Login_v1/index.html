@@ -30,13 +30,13 @@
 					<img src="images/logo.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" onsubmit="return false;">
 					<span class="login100-form-title">
 					 Login
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email">
+					<div class="wrap-input100 validate-input">
+						<input class="input100" id = "email" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -44,7 +44,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" id="password" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -52,7 +52,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" id ="login100-form-btn">
 							Login
 						</button>
 					</div>
@@ -65,6 +65,44 @@
 						</a>
 					</div>
 				</form>
+
+<script>
+	const loginButton = document.getElementById('login100-form-btn');
+  
+	loginButton.addEventListener('click', async () => {
+	  // Step 3: Get the values of the email and password input fields
+	  const email = document.getElementById('email').value;
+	  const password = document.getElementById('password').value;
+	
+    // Step 6: Redirect the user to the home page for their type
+    const userEmail = email.toLowerCase();
+    let userType;
+    if (userEmail === 'client@example.com') {
+      if(password == 'client')
+	  	window.location.href = 'homeclient.html';
+		else 
+		alert("invalid password");
+    } else if (userEmail === 'banker@example.com') {
+		if(password =='banker')
+		window.location.href = 'payments.html';
+		else 
+		alert("invalid password");
+	  
+    } else if (userEmail === 'admin@example.com') {
+		if(password =='admin')
+		window.location.href = 'Loans.html';
+		else 
+		alert("invalid password");
+    
+    } 
+    }
+  
+	
+			
+
+	);
+
+  </script>
 			</div>
 		</div>
 	</div>
@@ -88,6 +126,5 @@
 	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
 </body>
 </html>
