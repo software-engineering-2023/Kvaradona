@@ -1,0 +1,425 @@
+<!--
+=========================================================
+* Soft UI Design System - v1.0.9
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-design-system 
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+<link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
+<title>
+  
+
+  
+  Bank-y
+
+  
+</title>
+
+
+
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+<!-- Nucleo Icons -->
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+
+<!-- CSS Files -->
+
+
+
+<link id="pagestyle" href="./assets/css/soft-design-system.css?v=1.0.9" rel="stylesheet" />
+
+
+
+
+
+<!-- Nepcha Analytics (nepcha.com) -->
+<!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+<script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="index-page">
+  
+  
+  <!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
+<nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+  <div class="container-fluid px-0">
+    <a class="navbar-brand font-weight-bolder ms-sm-3" href="https://demos.creative-tim.com/soft-ui-design-system/index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+      Banker System
+    </a>
+    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+      <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+        <li class="nav-item dropdown dropdown-hover mx-2">
+          <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="javascript:;" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
+
+            
+            <p id="myId"></p>
+            <script>
+            var date = new Date(); 
+            var dd = date.getDate(); 
+            var mm = date.getMonth() + 1; 
+            var yyyy = date.getFullYear(); 
+            var newDate = dd + "-" + mm + "-" +yyyy; 
+            var p = document.getElementById("myId"); 
+            p.innerHTML = newDate; 
+            
+            </script> 
+          
+          
+       
+     
+          </div>
+
+          
+      
+          <body onload="startTime()">
+
+          
+            
+            <div id="txt"></div>
+            
+            <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
+           
+        </a>
+         
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+</div></div></div>
+
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/curved-images/curved.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-n5">Transfers</h1>
+          <p class="lead text-white mt-3"><br/> </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-absolute w-100 z-index-1 bottom-0">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="moving-waves">
+          <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+          <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+          <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+          <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bank-y - </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-7">
+    <h2>Transfers Status</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Date</th>
+          <th>Customer ID</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Status</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>1</td>
+          <td>30-05-2023</td>
+          <td>CUST001</td>
+          <td>Internal</td>
+          <td>$50000.00</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>30-05-2023</td>
+          <td>CUST002</td>
+          <td>International</td>
+          <td>$20000.00</td>
+          <td>Transferred</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>02-06-2023</td>
+          <td>CUST003</td>
+          <td>Domestic</td>
+          <td>$250000.00</td>
+          <td>Pending</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>03-06-2023</td>
+          <td>CUST004</td>
+          <td>Domestic</td>
+          <td>$30000.00</td>
+          <td>Transferred</td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td>05-06-2023</td>
+          <td>CUST005</td>
+          <td>International</td>
+          <td>$150000.00</td>
+          <td>Pending</td>
+        </tr>
+
+        <tr>
+          <td>6</td>
+          <td>08-06-2023</td>
+          <td>CUST006</td>
+          <td>Internal</td>
+          <td>$65000.00</td>
+          <td>Transferred</td>
+        </tr>
+
+        <tr>
+          <td>7</td>
+          <td>09-06-2023</td>
+          <td>CUST007</td>
+          <td>International</td>
+          <td>$25000.00</td>
+          <td>Pending</td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td>12-06-2023</td>
+          <td>CUST008</td>
+          <td>Domestic</td>
+          <td>$50000.00</td>
+          <td>Transferred</td>
+        </tr>
+
+        <tr>
+          <td>9</td>
+          <td>15-06-2023</td>
+          <td>CUST009</td>
+          <td>Internal</td>
+          <td>$20000.00</td>
+          <td>Transferred</td>
+        </tr>
+
+        <tr>
+          <td>10</td>
+          <td>18-06-2023</td>
+          <td>CUST0010</td>
+          <td>International</td>
+          <td>$40000.00</td>
+          <td>Pending</td>
+        </tr>
+
+        <tr>
+          <td>11</td>
+          <td>20-06-2023</td>
+          <td>CUST0011</td>
+          <td>Domestic</td>
+          <td>$15000.00</td>
+          <td>Pending</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
+
+
+
+
+         
+      
+    
+
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   Core JS Files   -->
+<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+
+
+
+
+<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+<script src="./assets/js/plugins/countup.min.js"></script>
+
+
+
+
+
+<script src="./assets/js/plugins/choices.min.js"></script>
+
+
+
+
+
+<script src="./assets/js/plugins/prism.min.js"></script>
+<script src="./assets/js/plugins/highlight.min.js"></script>
+
+
+<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+<!--  Google Maps Plugin    -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+<script src="./assets/js/soft-design-system.min.js?v=1.0.9" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+  if (document.getElementById('state1')) {
+    const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+    if (!countUp.error) {
+      countUp.start();
+    } else {
+      console.error(countUp.error);
+    }
+  }
+  if (document.getElementById('state2')) {
+    const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+    if (!countUp1.error) {
+      countUp1.start();
+    } else {
+      console.error(countUp1.error);
+    }
+  }
+  if (document.getElementById('state3')) {
+    const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+    if (!countUp2.error) {
+      countUp2.start();
+    } else {
+      console.error(countUp2.error);
+    };
+  }
+
+
+  if (document.getElementById('state4')) {
+    const countUp2 = new CountUp('state4', document.getElementById("state4").getAttribute("countTo"));
+    if (!countUp2.error) {
+      countUp2.start();
+    } else {
+      console.error(countUp2.error);
+    };
+  }
+</script>
+
+
+</body>
+
+</html>
